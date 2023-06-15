@@ -2,11 +2,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>mapaApp</title>
+<title>ODES-Aconcagua Biodiversidad</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="./Qgis2threejs.css">
 <script src="./threejs/three.min.js"></script>
 <script src="./threejs/OrbitControls.js"></script>
+<script src="./proj4js/proj4.js"></script>
 <script src="./Qgis2threejs.js"></script>
 </head>
 <body>
@@ -85,13 +86,18 @@
 <div id="progress"><div id="bar"></div></div>
 
 <!-- header and footer -->
-<div id="header"></div>
-<div id="footer"><span id="infobtn"><img src="./Qgis2threejs.png"></span> </div>
+<div id="header">Aplicación ODES-Aconcagua Biodiversidad</div>
+<div id="footer"><span id="infobtn"><img src="./Qgis2threejs.png"></span> Los colores corresponden a ....
+asdsadsad
+asdasd
+asdsad
+ads</div>
 
 <script>
 Q3D.Config.allVisible = true;
-Q3D.Config.viewpoint = {lookAt:{x:0.0,y:0.0,z:0.0},pos:{x:-81.56105825755273,y:3.3607415788005355,z:64.37158492067644}};
 Q3D.Config.localMode = true;
+Q3D.Config.northArrow.visible = true;
+Q3D.Config.northArrow.color = 0x666666;
 if (typeof proj4 === "undefined") document.getElementById("lib_proj4js").style.display = "none";
 
 var app = Q3D.application,
@@ -100,7 +106,7 @@ var app = Q3D.application,
 app.init(container);           // initialize application
 
 // load the scene
-app.loadSceneFile("./data/biodiversidad/scene.js", function () {
+app.loadSceneFile("./data/index/scene.js", function () {
   app.start();
 
   // North arrow inset
