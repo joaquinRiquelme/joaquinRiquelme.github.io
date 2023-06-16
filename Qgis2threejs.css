@@ -65,7 +65,7 @@ body {
 
 #header {
   position: absolute;
-  left: 5px;
+  right: 5px;
   top: 5px;
 }
 
@@ -90,8 +90,8 @@ body {
 }
 
 #leyenda img {
-  width: 150px;
-  height: 250px;
+  width: 214px;
+  height: 302px;
 }
 
 /* popup */
